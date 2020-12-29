@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <title>Editor Markdown</title>
+</head>
+<style>
+  html,
+  body {
+    height: 100%;
+  }
+
+  .ui.form textarea:not([rows]) {
+    height: calc(100vh - 70px);
+    min-height: calc(100vh - 70px);
+    max-height: calc(100vh - 70px);
+  }
+
+  .label-mk {
+    display: inline-block;
+    width: 100%;
+    height: calc(100vh - 70px);
+    overflow: auto
+  }
+</style>
+
+<body>
+  <div class="ui container">
+    <div class="ui inverted menu">
+      <div class="header item">
+        Editor Markdown
+      </div>
+    </div>
+    <div class='ui grid'>
+      <div class='row'>
+        <div class="eight wide column">
+          <form class="ui form"><textarea class="teste" placeholder="Markdown" id='markdown'></textarea></form>
+        </div>
+        <div class="eight wide column">
+          <label class="label-mk" id='markdown-output'></label>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="script/markdownParse.js"></script>
+  <script>
+    new HtmlHandler().TextChangeHandler('markdown', 'markdown-output')
+  </script>
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+  
+</body>
+
+</html>
