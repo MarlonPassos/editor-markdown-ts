@@ -30,3 +30,16 @@ Editor que converte texto simples em HTML utilizando [Markdown](https://pt.wikip
 - O HTML resultante será exibido em uma ```<Label />```
 - O layout será feito com Semantic-UI e o conteúdo deve ocupar 100% da página
 
+### Executando
+
+Instalando as dependências
+```
+yarn install
+```
+
+Executando o servidor live-server
+```
+yarn start 
+```
+
+![](https://github.com/MarlonPassos/editor-markdown-ts/blob/main/img/editor-markdown.png)
